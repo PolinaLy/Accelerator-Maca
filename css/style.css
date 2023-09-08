@@ -5602,7 +5602,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .news-materials__swiper-slide img {
-    width: 324px;
+    width: 100vh;
     height: 350px;
   }
 
@@ -5845,7 +5845,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 290px;
+    width: 90.63%;
   }
 
   .menu.menu-footer ul {
@@ -6277,7 +6277,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   }
 
   .news-materials__swiper-slide img {
-    width: 290px;
     height: 330px;
   }
 
