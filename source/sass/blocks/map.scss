@@ -1,0 +1,13 @@
+.map {
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+
+  @include vp-767 {
+    height: 240px;
+  }
+}
+
+.map .leaflet-control-container {
+  display: none;
+}

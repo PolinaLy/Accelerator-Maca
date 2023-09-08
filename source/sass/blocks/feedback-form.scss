@@ -1,0 +1,279 @@
+.feedback-form {
+  padding: 120px 0 60px;
+
+  .form {
+    border-radius: 16px;
+    max-width: 498px;
+    padding: 84px 74px 51px;
+    background-color: $color-cerulean-blue;
+    color: $color-alabaster;
+  }
+
+  h2 {
+    margin-bottom: 27px;
+
+    font-size: 30.5px;
+    color: $color-default-white;
+    text-align: start;
+  }
+
+  p {
+    margin-bottom: 20px;
+
+    text-align: start;
+  }
+
+  input,
+  textarea {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: $color-cerulean-blue;
+    color: $color-alabaster;
+
+    &:hover,
+    &:focus-visible {
+      border-color: $color-default-white;
+    }
+
+    &:active {
+      border-color: $color-default-white;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 98px;
+    margin: 0;
+  }
+
+  .custom-select {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &::after {
+      background-image: url("../img/svg/arrow-down.svg");
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active,
+    &.is-open {
+      outline: none;
+      border-color: $color-default-white;
+    }
+
+    &.is-open {
+      &::after {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .custom-select__text {
+    color: $color-alabaster;
+  }
+
+  .custom-select__list {
+    border-color: $color-default-white;
+  }
+
+  .custom-toggle__icon {
+    border-color: rgba(255, 255, 255, 0.3);
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      border-color: $color-default-white;
+    }
+  }
+
+  input:disabled + .custom-toggle__icon {
+    border-color: $color-default-white;
+    background: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    cursor: none;
+  }
+
+  input:checked + .custom-toggle__icon {
+    background-color: $color-default-white;
+    border-color: $color-default-white;
+
+    &::before {
+      background-image: url("../img/svg/checkbox-checked-blue.svg");
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-cerulean-blue;
+
+      &::before {
+        background-image: url("../img/svg/checkbox-checked.svg");
+      }
+    }
+  }
+
+  input:checked:disabled + .custom-toggle__icon {
+    border-color: #a9afb7;
+    background: #a9afb7;
+  }
+
+  .btn--form {
+    margin-top: 23px;
+
+    width: 100%;
+    justify-content: center;
+    border-color: $color-default-white;
+    color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-image: url("../img/svg/arrow-link-blue.svg");
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::after {
+        background-image: url("../img/svg/arrow-link-white.svg");
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      color: rgba($color: $color-cerulean-blue, $alpha: 0.7);
+
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::after {
+        background-image: url("../img/svg/arrow-link-white.svg");
+        transform: rotate(45deg);
+        opacity: 0.7;
+      }
+    }
+
+    &:disabled {
+      opacity: 1;
+      border-color: $color-mischka;
+      color: $color-mischka;
+      pointer-events: none;
+
+      &::before {
+        background-color: $color-mischka;
+      }
+
+      &::after {
+        background-image: url("../img/svg/arrow-link-white.svg");
+      }
+    }
+  }
+
+  @include vp-1199 {
+    padding-top: 100px;
+
+    .form {
+      max-width: 65.19%;
+      padding: 61px 45px 58px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+
+      font-size: 26.7px;
+      line-height: 100%;
+    }
+
+    p {
+      margin-bottom: 33px;
+
+      line-height: 125%;
+    }
+
+    form {
+      gap: 17px;
+    }
+  }
+
+  @include vp-767 {
+    padding: 67px 0 29px;
+
+    .form {
+      max-width: 100%;
+      padding: 53px 15px 50px;
+    }
+
+    h2 {
+      margin-bottom: 17px;
+
+      font-size: 17px;
+      line-height: 122%;
+    }
+
+    p {
+      width: 100%;
+      margin: 0 0 27px;
+
+      font-size: 13px;
+      line-height: 151%;
+    }
+
+    label {
+      gap: 11px;
+      font-size: 12px;
+      line-height: 117%;
+    }
+
+    input {
+      height: 50px;
+    }
+
+    form {
+      gap: 21px;
+    }
+
+    textarea {
+      min-height: 94px;
+    }
+
+    .btn--form {
+      margin-top: 10px;
+    }
+
+    .custom-select {
+      height: 50px;
+    }
+
+    .custom-select__button {
+      height: 50px;
+    }
+  }
+}
+
+.feedback-form__wrapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background-image: url("../img/feedback-form/back-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/feedback-form/back-desktop@2x.jpg");
+  }
+
+  @include vp-767 {
+    background-image: none;
+  }
+}

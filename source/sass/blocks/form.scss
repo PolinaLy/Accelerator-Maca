@@ -1,0 +1,230 @@
+.form {
+  h2 {
+    margin: 0 0 11px;
+
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 112.5%;
+    color: $color-cerulean-blue;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 17px;
+
+    font-size: 15px;
+    line-height: 162.5%;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  span {
+    display: block;
+    width: fit-content;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 128.6%;
+
+    &.label-checkbox {
+      flex-direction: row;
+      align-items: center;
+      min-height: 20px;
+      font-size: 11px;
+      gap: 10px;
+    }
+  }
+
+  .disabled {
+    opacity: 0.6;
+  }
+
+  input {
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(72, 72, 72, 0.3);
+
+    &:hover {
+      border-color: rgba(72, 72, 72, 1);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      border-color: rgba(169, 175, 183, 0.5);
+      background-color: rgba(169, 175, 183, 0.2);
+      pointer-events: none;
+
+      &:hover {
+        border-color: rgba(169, 175, 183, 0.5);
+      }
+    }
+  }
+
+  .btn--form {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    min-height: 54px;
+    margin: 10px auto 0;
+    padding: 4px 78px 4px 30px;
+    border-radius: 30px;
+    border: 1px solid $color-cerulean-blue;
+    background-color: transparent;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 4px;
+      margin: auto 0;
+      width: 46px;
+      height: 46px;
+      background-color: $color-cerulean-blue;
+      border-radius: 50%;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 22px;
+      margin: auto 0;
+      width: 10px;
+      height: 10px;
+      background-image: url("../img/svg/arrow-link-white.svg");
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      background-color: $color-cerulean-blue;
+      color: $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-image: url("../img/svg/arrow-link-blue.svg");
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      background-color: $color-cerulean-blue;
+      color: rgba(255, 255, 255, 0.7);
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-image: url("../img/svg/arrow-link-blue.svg");
+        transform: rotate(45deg);
+        opacity: 0.7;
+      }
+    }
+
+    &:disabled {
+      opacity: 1;
+      border-color: $color-mischka;
+      color: $color-mischka;
+      pointer-events: none;
+
+      &::before {
+        background-color: $color-mischka;
+      }
+    }
+  }
+
+  @include vp-1199 {
+    h2 {
+      font-size: 26.7px;
+      line-height: 100%;
+    }
+
+    p {
+      margin-bottom: 19px;
+
+      line-height: 150%;
+    }
+  }
+
+  @include vp-767 {
+    h2 {
+      margin-bottom: 9px;
+
+      font-size: 17px;
+      line-height: 100%;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 151%;
+      max-width: 90%;
+      margin: 0 auto 19px;
+    }
+
+    input {
+      min-height: 44px;
+      height: 44px;
+    }
+
+    form {
+      gap: 14px;
+    }
+
+    label {
+      gap: 5px;
+    }
+
+    .btn--form {
+      width: 100%;
+      justify-content: center;
+      min-height: 42px;
+      padding-left: 20px;
+      padding-right: 58px;
+      margin-top: 12px;
+
+      font-size: 11px;
+      letter-spacing: 0.24px;
+
+      &::before {
+        width: 34px;
+        height: 34px;
+      }
+
+      &::after {
+        right: 16px;
+      }
+    }
+  }
+}

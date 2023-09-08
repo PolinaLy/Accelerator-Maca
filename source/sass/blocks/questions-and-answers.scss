@@ -1,0 +1,44 @@
+.questions-and-answers {
+  padding-top: 126px;
+
+  .container {
+    display: grid;
+    gap: 68px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 100%;
+    color: $color-cerulean-blue;
+    text-align: center;
+  }
+
+  @include vp-1199 {
+    padding-top: 103px;
+
+    .container {
+      gap: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 147%;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 69px;
+
+    .container {
+      gap: 33px;
+    }
+
+    h2 {
+      font-size: 19px;
+      line-height: 100%;
+    }
+  }
+}

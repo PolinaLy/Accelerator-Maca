@@ -1,0 +1,268 @@
+.programs {
+  padding: 122px 0 120px;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 47px;
+    font-weight: 400;
+    color: $color-cerulean-blue;
+
+    margin: 0;
+  }
+
+  @include vp-1199 {
+    padding: 100px 0;
+
+    h2 {
+      font-size: 32px;
+      line-height: 147%;
+    }
+
+    h2 + .link {
+      margin-right: 5.86%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 71px 0 67px;
+
+    h2 {
+      font-size: 19px;
+      line-height: 100%;
+    }
+
+    h2 + .link {
+      margin-right: 0;
+      padding-left: 30px;
+      padding-right: 68px;
+      order: 1;
+    }
+  }
+}
+
+.programs__wrapper.container {
+  @include vp-1199 {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0 0 5.86%;
+  }
+
+  @include vp-767 {
+    padding: 0 4.69%;
+  }
+}
+
+.programs__swiper {
+  padding: 46px 0 62px;
+
+  .slider-button {
+    top: auto;
+    width: 22px;
+    height: 22px;
+    color: transparent;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1260px) {
+    .programs__swiper-scrollbar.swiper-scrollbar {
+      width: 91.45%;
+    }
+  }
+
+  @include vp-1199 {
+    padding-top: 40px;
+
+    .slider-button.swiper-button-prev {
+      right: calc(5.86% + 32px);
+    }
+
+    .slider-button.swiper-button-next {
+      right: 5.86%;
+    }
+  }
+
+  @include vp-767 {
+    overflow-y: inherit;
+    padding: 33px 0 30px;
+
+    .slider-button {
+      top: 0;
+    }
+
+    .slider-button.swiper-button-prev {
+      right: 32px;
+    }
+
+    .slider-button.swiper-button-next {
+      right: 0;
+    }
+  }
+}
+
+.programs__swiper-slide {
+  position: relative;
+  width: fit-content;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    img {
+      width: 324px;
+      height: 420px;
+      object-fit: cover;
+    }
+  }
+
+  @include vp-767 {
+    width: 290px;
+
+    img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+}
+
+.programs__content {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 392px;
+  height: 420px;
+  padding: 20px;
+  background: rgba(49, 109, 194, 0.2);
+  overflow: auto;
+
+  h3 {
+    position: relative;
+    min-width: 194px;
+    margin: 0;
+    padding: 15px 10px 4px 18px;
+
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 108.3%;
+    color: $color-cerulean-blue;
+    background-color: $color-default-white;
+    border-radius: 12px 12px 0 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: -17px;
+      width: 18px;
+      height: 18px;
+      background-image: url("../img/svg/angle-pagination.svg");
+    }
+  }
+
+  @include vp-1199 {
+    width: 324px;
+
+    h3 {
+      min-width: 173px;
+      padding-top: 16px;
+
+      font-size: 19px;
+      line-height: 100%;
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 400px;
+    padding: 18px 10px;
+
+    h3 {
+      min-width: 146px;
+      padding: 19px 10px 8px 18px;
+
+      font-size: 15px;
+      line-height: 112.5%;
+    }
+  }
+}
+
+.programs__content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.programs__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+  max-width: 321px;
+  height: fit-content;
+  min-height: 79px;
+  padding: 12px 18px 15px 18px;
+  margin-top: -2px;
+
+  border-radius: 0 12px 12px;
+  background-color: $color-default-white;
+
+  p {
+    max-width: 239px;
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 128.6%;
+  }
+
+  .link {
+    border: none;
+    padding: 0;
+    width: 30px;
+    min-height: 30px;
+    background-color: $color-default-white;
+
+    &::before {
+      width: 30px;
+      height: 30px;
+      right: 0;
+    }
+
+    &::after {
+      right: 10px;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include vp-1199 {
+    max-width: 263px;
+    min-height: 77px;
+
+    p {
+      max-width: 181px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: 270px;
+    min-height: 69px;
+
+    p {
+      max-width: 188px;
+
+      font-size: 11.4px;
+      line-height: 116%;
+    }
+  }
+}

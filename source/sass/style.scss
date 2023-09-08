@@ -14,16 +14,37 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
-
-// Blocks
-// ---------------------------------
-
 @import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/header";
+@import "blocks/menu";
+@import "blocks/menu-header";
+@import "blocks/logo";
+@import "blocks/slider-button";
+@import "blocks/swiper";
+@import "blocks/hero";
+@import "blocks/link";
+@import "blocks/about";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
+@import "blocks/form";
+@import "blocks/programs";
+@import "blocks/swiper-scrollbar";
+@import "blocks/how-to-go";
+@import "blocks/news-materials";
+@import "blocks/questions-and-answers";
+@import "blocks/accordion/accordion";
+@import "blocks/accordion/data-accordion";
+@import "blocks/reviews";
+@import "blocks/contacts-map";
+@import "blocks/map";
+@import "blocks/leaflet";
+@import "blocks/feedback-form";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/modal";
 @import "blocks/custom-select";
 
+// Blocks
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

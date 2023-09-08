@@ -1,0 +1,139 @@
+.contacts-map {
+  margin-top: 120px;
+  padding: 120px 0;
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+
+  .container {
+    display: grid;
+    gap: 40px;
+  }
+
+  h2 {
+    margin: 7px 0 0;
+
+    font-size: 47px;
+    line-height: 100%;
+    font-weight: 400;
+  }
+
+  @include vp-1199 {
+    margin-top: 100px;
+    padding: 100px 0;
+
+    .container {
+      gap: 30px;
+    }
+
+    h2 {
+      margin: 2px 0 0;
+
+      font-size: 32px;
+      line-height: 147%;
+    }
+  }
+
+  @include vp-767 {
+    margin-top: 67px;
+    padding: 67px 0;
+
+    h2 {
+      margin: 4px 0 0;
+
+      font-size: 19px;
+      line-height: 100%;
+    }
+  }
+}
+
+.contacts-map__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 32px;
+  border-bottom: 2px solid rgba($color: $color-default-white, $alpha: 0.2);
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 604px;
+    gap: 51px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: grid;
+    gap: 18px;
+    max-width: 268px;
+  }
+
+  h3 {
+    margin: 0;
+
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0.12px;
+    text-transform: uppercase;
+    color: $color-alabaster;
+  }
+
+  a,
+  p {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 162.5%;
+    color: $color-default-white;
+  }
+
+  .contacts-map__tel {
+    max-width: 131px;
+  }
+
+  @include vp-1199 {
+    gap: 30px;
+    padding-bottom: 26px;
+
+    ul {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    li {
+      gap: 21px;
+    }
+
+    a,
+    p {
+      line-height: 125%;
+    }
+  }
+
+  @include vp-767 {
+    padding-bottom: 23px;
+
+    ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    li {
+      gap: 10px;
+    }
+
+    a,
+    p {
+      font-size: 13.2px;
+      line-height: 143%;
+    }
+
+    .contacts-map__tel {
+      max-width: 115px;
+    }
+  }
+}

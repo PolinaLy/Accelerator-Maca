@@ -2,3 +2,11 @@ build/*.js
 source/js/vendor/*.js
 gulpfile.js
 webpack.config.cjs
+source/sass/blocks/leaflet.scss
+source/sass/blocks/swiper.scss
+source/js/modules/hero-swiper.js
+source/js/modules/leaflet.js
+source/js/modules/map.js
+source/js/modules/reviews-swiper.js
+source/js/modules/programs-swiper.js
+source/js/modules/news-swiper.js

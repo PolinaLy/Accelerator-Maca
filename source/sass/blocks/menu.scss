@@ -1,0 +1,151 @@
+.menu {
+  margin-top: 20px;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    display: flex;
+    width: fit-content;
+  }
+
+
+  .menu__sub-nav {
+    position: relative;
+    color: currentColor;
+    border: none;
+    background-color: transparent;
+    text-transform: inherit;
+    font-weight: 500;
+    padding: 0 22px 0 0;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto 0;
+      width: 12px;
+      height: 12px;
+      background-image: url("../img/svg/arrow-down.svg");
+      transform: rotate(180deg);
+    }
+
+    &--open {
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+
+.menu__wrapper-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 134px;
+  height: 54px;
+  padding: 4px 4px 4px 20px;
+  border: 1px solid $color-cerulean-blue;
+  border-radius: 30px;
+  background-color: $color-default-white;
+
+  span {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    color: $color-cerulean-blue;
+  }
+}
+
+.menu__toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/svg/menu-open.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
+
+.menu.menu-footer {
+  margin: 0;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    line-height: 162.5%;
+    color: $color-default-charcoal;
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      color: $color-cerulean-blue;
+    }
+
+    &:active {
+      color: $color-endeavour;
+    }
+  }
+
+  @include vp-1199 {
+    margin-left: auto;
+
+    ul {
+      gap: 15px;
+    }
+
+    a {
+      line-height: 125%;
+    }
+  }
+
+  @include vp-767 {
+    ul {
+      justify-content: center;
+      column-gap: 26px;
+      row-gap: 10px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 142.9%;
+    }
+  }
+}

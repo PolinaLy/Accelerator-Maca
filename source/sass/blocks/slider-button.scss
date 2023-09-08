@@ -1,0 +1,60 @@
+.slider-button {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  z-index: 1;
+  color: transparent;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 11px;
+    height: 12px;
+    background-image: url("../img/svg/arrow-btn-blue.svg");
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
+
+  &:disabled {
+    background-color: transparent;
+
+    &::after {
+      background-image: url("../img/svg/arrow-btn-gray.svg");
+    }
+  }
+}
+
+.slider-button.swiper-button-prev {
+  left: auto;
+  right: 32px;
+
+  &::after {
+    transform: rotate(180deg);
+  }
+}
+
+.slider-button.swiper-button-next {
+  right: 0;
+}

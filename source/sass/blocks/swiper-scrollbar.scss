@@ -1,0 +1,20 @@
+.swiper-scrollbar {
+  margin-bottom: 5px;
+  height: 2px;
+  max-width: 1134px;
+  background-color: rgba(49, 109, 194, 0.2);
+
+  .swiper-scrollbar-drag {
+    height: 2px;
+    margin: auto 0;
+    background-color: $color-cerulean-blue;
+  }
+
+  @include vp-1199 {
+    max-width: 77.5%;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

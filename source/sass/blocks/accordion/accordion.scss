@@ -1,0 +1,251 @@
+.accordion {
+  display: grid;
+  gap: 10px;
+  width: 1028px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.accordion__element {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid $color-cerulean-blue;
+}
+
+.accordion__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 39.2px 40px;
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  text-align: start;
+  cursor: pointer;
+  font-size: 26.4px;
+  font-weight: 400;
+  line-height: 102.4%;
+  color: $color-cerulean-blue;
+
+  span {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    min-height: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color-cerulean-blue;
+    border-radius: 50%;
+    background-color: $color-cerulean-blue;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 51px;
+    right: 51px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/svg/plus-white.svg");
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    background-color: $color-default-white;
+    outline: none;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-image: url("../img/svg/plus-blue.svg");
+    }
+  }
+
+  &:active {
+    color: $color-endeavour;
+
+    &::before {
+      background-color: $color-endeavour;
+    }
+
+    &::after {
+      background-image: url("../img/svg/plus-white.svg");
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  @include vp-1199 {
+    padding: 30px 30px 29px;
+    font-size: 20.8px;
+    line-height: 98%;
+
+    &::before {
+      top: 30px;
+      right: 30px;
+    }
+
+    &::after {
+      top: 41px;
+      right: 41px;
+    }
+
+    span {
+      max-width: 78%;
+    }
+  }
+
+  @include vp-767 {
+    padding: 19px 15px;
+    font-size: 15px;
+    line-height: 122%;
+
+    &::before {
+      top: 28%;
+      right: 15px;
+    }
+
+    &::after {
+      top: 41%;
+      right: 26px;
+    }
+
+    span {
+      max-width: 72.3%;
+    }
+  }
+}
+
+.accordion__content {
+  p {
+    max-width: 637px;
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 170%;
+    color: $color-alabaster;
+  }
+
+  @include vp-1199 {
+    p {
+      max-width: 92%;
+      line-height: 137%;
+    }
+  }
+
+  @include vp-767 {
+    p {
+      max-width: 100%;
+      font-size: 13.2px;
+      line-height: 153%;
+    }
+  }
+}
+
+.accordion__element.is-active {
+  background-color: $color-cerulean-blue;
+  padding-bottom: 32px;
+
+  &:active {
+    background-color: $color-endeavour;
+
+    .accordion__button {
+      background-color: $color-endeavour;
+    }
+  }
+
+  .accordion__button {
+    padding-bottom: 14px;
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    &::before {
+      border: 1px solid $color-default-white;
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      top: 60px;
+      right: 51px;
+      width: 18px;
+      height: 1px;
+      background: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:focus-visible {
+      outline: none;
+
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::after {
+        background: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-endeavour;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background: $color-cerulean-blue;
+      }
+    }
+  }
+
+  .accordion__content {
+    padding: 0 40px 0;
+  }
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+
+    .accordion__button {
+      &::after {
+        top: 49px;
+        right: 41px;
+      }
+    }
+
+    .accordion__content {
+      padding: 0 30px 0;
+    }
+  }
+
+  @include vp-767 {
+    padding-bottom: 14px;
+
+    .accordion__button {
+      &::after {
+        top: 39px;
+        right: 26px;
+      }
+    }
+
+    .accordion__content {
+      padding: 0 15px 0;
+    }
+  }
+}
