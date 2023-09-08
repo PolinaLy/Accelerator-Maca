@@ -642,6 +642,10 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #ffffff;
   background-color: #316dc2;
   border: none;
@@ -2199,6 +2203,10 @@ button.swiper-pagination-bullet {
   letter-spacing: 0.28px;
   text-transform: uppercase;
   color: #316dc2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3095,6 +3103,7 @@ button.swiper-pagination-bullet {
 .news-materials__buttons button {
   padding: 10px 24px;
   border-radius: 20px;
+  background: transparent;
   border: 1px solid transparent;
   font-size: 14px;
   font-weight: 500;
