@@ -39,6 +39,7 @@ export const initNewsSwiper = function () {
         renderBullet: function (index, className) {
           return '<button class="' + className + '" type="button">' + (index + 1) + '</button>';
         },
+        clickable: true,
       },
     });
   }

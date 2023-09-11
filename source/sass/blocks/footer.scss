@@ -55,10 +55,12 @@
     &:focus-visible {
       outline: none;
       color: $color-cerulean-blue;
+      border-color: $color-cerulean-blue;
     }
 
     &:active {
       color: $color-endeavour;
+      border-color: $color-endeavour;
     }
   }
 
