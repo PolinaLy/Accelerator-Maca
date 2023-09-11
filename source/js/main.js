@@ -10,7 +10,7 @@ import {initMap} from './modules/map';
 import './modules/open-menu';
 import './modules/open-sub-menu';
 import './modules/news-tab-active';
-import './modules/leaflet';
+import './vendor/leaflet';
 import './modules/index';
 
 // ---------------------------------

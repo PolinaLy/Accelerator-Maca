@@ -51,73 +51,92 @@
 
     <main>
       <section class="hero">
-        <div class="hero__swiper swiper">
-          <div class="swiper-wrapper">
-            <div class="hero__swiper-slide swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/internship.webp 1x, ./img/hero/internship@2x.webp 2x" width="1440" height="800">
-                <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/internship-tablet.webp 1x, ./img/hero/internship.webp 2x"  width="768" height="1024">
-                <source type="image/webp" srcset="./img/hero/internship-mobile.webp 1x, ./img/hero/internship-tablet.webp 2x" width="320" height="568">
+        <div class="hero__bg-container">
+          <div class="hero__bg-swiper swiper" data-slider="hero-images">
+            <div class="hero__bg-swiper-wrapper swiper-wrapper">
+              <div class="hero__bg-swiper-slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/internship.webp 1x, ./img/hero/internship@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/internship-tablet.webp 1x, ./img/hero/internship.webp 2x"  width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/internship-mobile.webp 1x, ./img/hero/internship-tablet.webp 2x" width="320" height="568">
 
-                <source media="(min-width:1440px)" srcset="./img/hero/internship.jpg 1x, ./img/hero/internship@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width:768px)" srcset="./img/hero/internship-tablet.jpg 1x, ./img/hero/internship.jpg 2x" width="768" height="1024">
-                <img src="./img/hero/internship-mobile.jpg"
-                srcset="./img/hero/internship-tablet.jpg 2x" width="320" height="568" alt="Стажировки в Израиле.">
-              </picture>
+                  <source media="(min-width:1440px)" srcset="./img/hero/internship.jpg 1x, ./img/hero/internship@2x.jpg 2x" width="1440" height="800">
+                  <source media="(min-width:768px)" srcset="./img/hero/internship-tablet.jpg 1x, ./img/hero/internship.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/internship-mobile.jpg"
+                  srcset="./img/hero/internship-tablet.jpg 2x" width="320" height="568" alt="Стажировки в Израиле.">
+                </picture>
+              </div>
+              <div class="hero__bg-swiper-slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/volunteering.webp 1x, ./img/hero/volunteering@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/volunteering-tablet.webp 1x, ./img/hero/volunteering.webp 2x"  width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/volunteering-mobile.webp 1x, ./img/hero/volunteering-tablet.webp 2x" width="320" height="568">
 
-              <div class="hero__wrapper">
-                <div class="hero__content">
-                  <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
-                  <div class="hero__text">
-                    <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                  <source media="(min-width:1440px)" srcset="./img/hero/volunteering.jpg 1x, ./img/hero/volunteering@2x.jpg 2x" width="1440" height="800">
+                  <source media="(min-width:768px)" srcset="./img/hero/volunteering-tablet.jpg 1x, ./img/hero/volunteering.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/volunteering-mobile.jpg"
+                  srcset="./img/hero/volunteering-tablet.jpg 2x" width="320" height="568" loading="lazy" alt="Волонтёрские программы.">
+                </picture>
+              </div>
+              <div class="hero__bg-swiper-slide swiper-slide">
+                <picture>
+                  <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/experience.webp 1x, ./img/hero/experience@2x.webp 2x" width="1440" height="800">
+                  <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/experience-tablet.webp 1x, ./img/hero/experience.webp 2x"  width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero/experience-mobile.webp 1x, ./img/hero/experience-tablet.webp 2x" width="320" height="568">
+
+                  <source media="(min-width:1440px)" srcset="./img/hero/experience.jpg 1x, ./img/hero/experience@2x.jpg 2x" width="1440" height="800">
+                  <source media="(min-width:768px)" srcset="./img/hero/experience-tablet.jpg 1x, ./img/hero/experience.jpg 2x" width="768" height="1024">
+                  <img src="./img/hero/experience-mobile.jpg"
+                  srcset="./img/hero/experience-tablet.jpg 2x" width="320" height="568" loading="lazy" alt="Опыт обучения за границей.">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__container container">
+          <div class="hero__swiper swiper" data-slider="hero-content">
+            <div class="hero__pagination swiper-pagination" data-slider="hero-bullets"></div>
+            <div class="hero__wrapper swiper-wrapper">
+              <div class="hero__slide swiper-slide">
+                <div class="hero__slide-container">
+                  <div class="hero__slide-header">
+                    <h2>Программы стажировок в&nbsp;крупнейших компаниях Израиля</h2>
+                  </div>
+                  <div class="hero__slide-content">
+                    <div class="hero__slide-text">
+                      <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                      <p>Получите незаменимый опыт работы в&nbsp;ведущих израильских компаниях и&nbsp;государственных организациях.</p>
+                    </div>
                     <div class="hero__wrapper-link">
                       <a class="hero__link link" href="#">подробнее</a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="hero__swiper-slide swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/volunteering.webp 1x, ./img/hero/volunteering@2x.webp 2x" width="1440" height="800">
-                <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/volunteering-tablet.webp 1x, ./img/hero/volunteering.webp 2x"  width="768" height="1024">
-                <source type="image/webp" srcset="./img/hero/volunteering-mobile.webp 1x, ./img/hero/volunteering-tablet.webp 2x" width="320" height="568">
-
-                <source media="(min-width:1440px)" srcset="./img/hero/volunteering.jpg 1x, ./img/hero/volunteering@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width:768px)" srcset="./img/hero/volunteering-tablet.jpg 1x, ./img/hero/volunteering.jpg 2x" width="768" height="1024">
-                <img src="./img/hero/volunteering-mobile.jpg"
-                srcset="./img/hero/volunteering-tablet.jpg 2x" width="320" height="568" loading="lazy" alt="Волонтёрские программы.">
-              </picture>
-              <div class="hero__wrapper">
-                <div class="hero__content">
-                  <h2>Волонтёрские программы &mdash; внесите свой вклад в&nbsp;общество</h2>
-                  <div class="hero__text">
-                    <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+              <div class="hero__slide swiper-slide">
+                <div class="hero__slide-container">
+                  <div class="hero__slide-header">
+                    <h2>Волонтёрские программы внесите свой вклад в&nbsp;общество</h2>
+                  </div>
+                  <div class="hero__slide-content">
+                    <div class="hero__slide-text">
+                      <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и&nbsp;другое.</p>
+                    </div>
                     <div class="hero__wrapper-link">
                       <a class="hero__link link" href="#">подробнее</a>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="hero__swiper-slide swiper-slide">
-              <picture>
-                <source type="image/webp" media="(min-width:1440px)" srcset="./img/hero/experience.webp 1x, ./img/hero/experience@2x.webp 2x" width="1440" height="800">
-                <source type="image/webp" media="(min-width:768px)" srcset="./img/hero/experience-tablet.webp 1x, ./img/hero/experience.webp 2x"  width="768" height="1024">
-                <source type="image/webp" srcset="./img/hero/experience-mobile.webp 1x, ./img/hero/experience-tablet.webp 2x" width="320" height="568">
-
-                <source media="(min-width:1440px)" srcset="./img/hero/experience.jpg 1x, ./img/hero/experience@2x.jpg 2x" width="1440" height="800">
-                <source media="(min-width:768px)" srcset="./img/hero/experience-tablet.jpg 1x, ./img/hero/experience.jpg 2x" width="768" height="1024">
-                <img src="./img/hero/experience-mobile.jpg"
-                srcset="./img/hero/experience-tablet.jpg 2x" width="320" height="568" loading="lazy" alt="Опыт обучения за границей.">
-              </picture>
-              <div class="hero__wrapper">
-                <div class="hero__content">
-                  <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
-                  <div class="hero__text">
-                    <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+              <div class="hero__slide swiper-slide">
+                <div class="hero__slide-container">
+                  <div class="hero__slide-header">
+                    <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                  </div>
+                  <div class="hero__slide-content">
+                    <div class="hero__slide-text">
+                      <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;Тель-Авиве и&nbsp;ощущая настоящий израильский стиль жизни!</p>
+                    </div>
                     <div class="hero__wrapper-link">
                       <a class="hero__link link" href="#">подробнее</a>
                     </div>
@@ -126,9 +145,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="hero__swiper-pagination"></div>
         </div>
       </section>
 
@@ -255,7 +271,7 @@
               <source media="(min-width:1440px)" srcset="./img/how-to-go/desktop.jpg 1x, ./img/how-to-go/desktop@2x.jpg 2x" width="498" height="363">
               <source media="(min-width:768px)" srcset="./img/how-to-go/tablet.jpg 1x, ./img/how-to-go/tablet@2x.jpg 2x" width="678" height="375">
               <img src="./img/how-to-go/mobile.jpg"
-              srcset="./img/how-to-go/desktop.jpg 2x" width="290" height="320" alt="Дорожный указатель.">
+              srcset="./img/how-to-go/desktop.jpg 2x" width="290" height="200" alt="Дорожный указатель.">
             </picture>
           </div>
           <div class="how-to-go__list">
@@ -620,7 +636,7 @@
           </div>
           <div class="footer__info">
             <p>Masa © 2023 Все права защищены</p>
-            <a href="">Политика конфиденциальности</a>
+            <a href="#">Политика конфиденциальности</a>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/leaflet";
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
@@ -37,7 +38,6 @@
 @import "blocks/reviews";
 @import "blocks/contacts-map";
 @import "blocks/map";
-@import "blocks/leaflet";
 @import "blocks/feedback-form";
 @import "blocks/footer";
 @import "blocks/social";
