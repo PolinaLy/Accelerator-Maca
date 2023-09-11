@@ -3591,6 +3591,7 @@ button.swiper-pagination-bullet {
 
 .programs h2 {
   font-size: 47px;
+  line-height: 100%;
   font-weight: 400;
   color: #316dc2;
   margin: 0;
@@ -3633,7 +3634,7 @@ button.swiper-pagination-bullet {
 
 .programs__content h3 {
   position: relative;
-  min-width: 194px;
+  width: 194px;
   margin: 0;
   padding: 15px 10px 4px 18px;
   font-size: 23px;
@@ -4818,10 +4819,12 @@ button.swiper-pagination-bullet {
 .footer__info a:focus-visible {
   outline: none;
   color: #316dc2;
+  border-color: #316dc2;
 }
 
 .footer__info a:active {
   color: #275699;
+  border-color: #275699;
 }
 
 .social ul {
@@ -5336,6 +5339,7 @@ button.swiper-pagination-bullet {
 
   .hero__container {
     min-height: 1024px;
+    padding-bottom: 60px;
   }
 
   .hero__slide-header {
@@ -5492,7 +5496,7 @@ button.swiper-pagination-bullet {
   }
 
   .programs__content h3 {
-    min-width: 173px;
+    width: 173px;
     padding-top: 16px;
     font-size: 19px;
     line-height: 100%;
@@ -6164,7 +6168,7 @@ button.swiper-pagination-bullet {
   }
 
   .programs__content h3 {
-    min-width: 146px;
+    width: 146px;
     padding: 19px 10px 8px 18px;
     font-size: 15px;
     line-height: 112.5%;
