@@ -4522,17 +4522,17 @@ button.swiper-pagination-bullet {
   }
 }
 
-.news-materials__first-slide {
+.news-materials__swiper-slide.news-materials__first-slide {
   width: 604px;
 }
-.news-materials__first-slide img {
+.news-materials__swiper-slide.news-materials__first-slide img {
   width: 604px;
 }
-.news-materials__first-slide h3 {
+.news-materials__swiper-slide.news-materials__first-slide h3 {
   max-width: 291px;
   padding: 15px 18px 5px 0;
 }
-.news-materials__first-slide p {
+.news-materials__swiper-slide.news-materials__first-slide p {
   max-width: 325px;
 }
 
