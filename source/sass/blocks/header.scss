@@ -49,10 +49,10 @@
 
   ul {
     display: grid;
-    gap: 18px;
+    gap: 17px;
     min-width: 286px;
     margin: 0;
-    padding: 30px 25px;
+    padding: 28px 25px;
     border-radius: 16px;
     background-color: $color-cerulean-blue;
     list-style: none;
@@ -73,7 +73,7 @@
   a.is-active {
     & + ul {
       display: grid;
-      gap: 6px;
+      gap: 2px;
       min-width: 130px;
       padding: 10px 16px 0;
       text-transform: initial;

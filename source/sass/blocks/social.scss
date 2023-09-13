@@ -2,8 +2,9 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: end;
     gap: 20px;
-    width: fit-content;
+    width: 316px;
     margin: 0 0 0 auto;
     padding: 0;
     list-style: none;
@@ -15,11 +16,18 @@
 
     ul {
       gap: 10px;
+      width: auto;
+      max-width: 312px;
     }
   }
 
   @include vp-767 {
     margin-right: auto;
+
+    ul {
+      max-width: 242px;
+      justify-content: center;
+    }
   }
 }
 

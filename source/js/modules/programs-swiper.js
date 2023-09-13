@@ -1,6 +1,5 @@
 export const initProgramsSwiper = function () {
   new Swiper(".programs__swiper", {
-    loop: true,
 
     navigation: {
       nextEl: '.programs__swiper .slider-button--next',

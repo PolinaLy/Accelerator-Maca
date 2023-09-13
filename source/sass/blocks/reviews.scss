@@ -57,7 +57,7 @@
   }
 
 
-  @include vp-1260 {
+  @include vp-1390 {
     max-width: 91.6vw;
     overflow-y: inherit;
 
@@ -70,7 +70,7 @@
     }
   }
 
-  @media (min-width: 1200px) and (max-width: 1260px) {
+  @media (min-width: 1200px) and (max-width: 1390px) {
     .reviews__swiper-scrollbar.swiper-scrollbar {
       width: 83.15%;
     }
@@ -108,14 +108,15 @@
 }
 
 .reviews__swiper-slide {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
   gap: 29px;
   width: 604px;
-  height: 430px;
+  min-height: 430px;
   padding: 50px 50px 42px;
   border-radius: 16px;
   border: 1px solid $color-cerulean-blue;
-  overflow: auto;
 
   @include vp-1260 {
     width: 77.46%;

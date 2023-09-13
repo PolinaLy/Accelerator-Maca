@@ -1,6 +1,6 @@
 .form {
   h2 {
-    margin: 0 0 11px;
+    margin: 0 0 8px;
 
     font-size: 31px;
     font-weight: 400;
@@ -10,17 +10,17 @@
   }
 
   p {
-    margin: 0 0 17px;
+    margin: 0 0 21px;
 
     font-size: 15px;
-    line-height: 162.5%;
+    line-height: 170%;
     text-align: center;
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 19px;
   }
 
   span {
@@ -28,15 +28,20 @@
     width: fit-content;
   }
 
+  .form__wrapper {
+    display: grid;
+    gap: 8px;
+  }
+
   label {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
     width: 100%;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
-    line-height: 128.6%;
+    line-height: 100%;
 
     &.label-checkbox {
       flex-direction: row;
@@ -91,7 +96,7 @@
     align-items: center;
     width: fit-content;
     min-height: 54px;
-    margin: 10px auto 0;
+    margin: 14px auto 0;
     padding: 4px 78px 4px 30px;
     border-radius: 30px;
     border: 1px solid $color-cerulean-blue;
@@ -167,14 +172,27 @@
 
   @include vp-1199 {
     h2 {
+      margin-bottom: 12px;
       font-size: 26.7px;
       line-height: 100%;
     }
 
     p {
-      margin-bottom: 19px;
+      margin-bottom: 24px;
 
-      line-height: 150%;
+      line-height: 140%;
+    }
+
+    label {
+      gap: 10px;
+    }
+
+    .form__wrapper {
+      gap: 10px;
+    }
+
+    .btn--form {
+      margin-top: 12px;
     }
   }
 
@@ -189,8 +207,12 @@
     p {
       font-size: 13px;
       line-height: 151%;
-      max-width: 90%;
+      max-width: 80%;
       margin: 0 auto 19px;
+    }
+
+    .form__wrapper {
+      gap: 8px;
     }
 
     input {
@@ -202,8 +224,16 @@
       gap: 14px;
     }
 
+    .custom-toggle__icon {
+      top: 4px;
+    }
+
+    span {
+      line-height: 117%;
+    }
+
     label {
-      gap: 5px;
+      gap: 8px;
     }
 
     .btn--form {
@@ -212,7 +242,7 @@
       min-height: 42px;
       padding-left: 20px;
       padding-right: 58px;
-      margin-top: 12px;
+      margin-top: 14px;
 
       font-size: 11px;
       letter-spacing: 0.24px;

@@ -24,6 +24,7 @@ export const initHeroSwiper = function () {
       loop: true,
       effect: 'fade',
       autoHeight: true,
+      direction: 'horizontal',
 
       fadeEffect: {
         crossFade: true,
@@ -43,22 +44,6 @@ export const initHeroSwiper = function () {
           allowTouchMove: false,
         },
       },
-    });
-
-    const paginations = document.querySelectorAll('.hero__pagination .hero__pagination-btn');
-    document.addEventListener('keydown', (e) => {
-      if ((e.key === 'Space') || (e.keyCode === 32)) {
-        e.preventDefault();
-        if (paginations[0].classList.contains('is-active')) {
-          paginations[1].click();
-        } else if (paginations[1].classList.contains('is-active')) {
-          paginations[2].click();
-        } else if (paginations[2].classList.contains('is-active')) {
-          paginations[0].click();
-        } else {
-          return;
-        }
-      }
     });
 
     swiperHeroImg.controller.control = swiperHeroContent;

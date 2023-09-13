@@ -91,6 +91,20 @@
     color: $color-default-white;
   }
 
+  .contacts-map__mail,
+  .contacts-map__tel {
+    &:hover,
+    &:focus-visible {
+      outline: none;
+      border-bottom: 1px solid $color-default-white;
+    }
+
+    &:active {
+      border: none;
+      opacity: 0.8;
+    }
+  }
+
   .contacts-map__tel {
     max-width: 131px;
   }

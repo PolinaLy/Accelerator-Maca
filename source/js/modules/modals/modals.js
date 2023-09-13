@@ -84,6 +84,9 @@ export class Modals {
     evt.preventDefault();
 
     this._modalName = target.closest('[data-open-modal]').dataset.openModal;
+    setTimeout(function () {
+      document.querySelector('.modal .custom-input input').focus();
+    }, 100);
 
     if (!this._modalName) {
       return;

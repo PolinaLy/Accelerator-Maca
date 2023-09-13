@@ -60,6 +60,7 @@
     text-transform: uppercase;
     color: $color-cerulean-blue;
     opacity: 0.6;
+    cursor: pointer;
 
     &.is-active {
       border-color: $color-cerulean-blue;
@@ -68,6 +69,7 @@
 
     &:hover,
     &:focus-visible {
+      outline: none;
       opacity: 1;
     }
   }
@@ -139,6 +141,7 @@
 
     &:hover,
     &:focus-visible {
+      outline: none;
       opacity: 1;
       border: 1px solid $color-cerulean-blue;
     }
@@ -157,7 +160,7 @@
   }
 
   .swiper-wrapper {
-    max-width: 86.1vw;
+    max-width: 1240px;
   }
 
   @include vp-1199 {
@@ -171,6 +174,7 @@
 
     .swiper-wrapper {
       max-height: 1000px;
+      max-width: 86.1vw;
     }
   }
 

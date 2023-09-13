@@ -1,5 +1,5 @@
 const header = document.querySelector('header');
-const menuButton = document.querySelector('.menu__toggle');
+const menuWrapperToggle = document.querySelector('.menu__wrapper-toggle');
 const body = document.querySelector('body');
 const linkHeader = document.querySelectorAll('.menu a');
 
@@ -22,14 +22,14 @@ function trapFocus(element) {
 }
 
 const headerOutsideClick = (evt) => {
-  if (evt.target === header && evt.target.closest !== 'menu-header') {
+  if ((evt.target === menuWrapperToggle) || (evt.target === header && evt.target.closest !== 'menu-header') || (evt.target === document.querySelector('header .container') && evt.target.closest !== 'menu-header')) {
     header.classList.remove('open-menu');
     body.style.position = 'inherit';
   }
 };
 
-if (document.querySelector('.menu') && menuButton) {
-  menuButton.addEventListener('click', function () {
+if (document.querySelector('.menu') && menuWrapperToggle) {
+  menuWrapperToggle.addEventListener('click', function () {
     header.classList.toggle('open-menu');
 
     if (header.classList.contains('open-menu')) {

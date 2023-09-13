@@ -9,6 +9,19 @@
     color: $color-alabaster;
   }
 
+  form {
+    gap: 16px;
+  }
+
+  .form__wrapper {
+    gap: 12px;
+    margin-top: 5px;
+  }
+
+  .custom-toggle {
+    margin-top: 2px;
+  }
+
   h2 {
     margin-bottom: 27px;
 
@@ -77,6 +90,14 @@
     border-color: $color-default-white;
   }
 
+  input[type="checkbox"]:hover,
+  input[type="checkbox"]:focus-visible {
+    & + .custom-toggle__icon {
+      outline: none;
+      border-color: $color-default-white;
+    }
+  }
+
   .custom-toggle__icon {
     border-color: rgba(255, 255, 255, 0.3);
 
@@ -112,13 +133,22 @@
     }
   }
 
+  input:checked:hover + .custom-toggle__icon,
+  input:checked:focus-visible + .custom-toggle__icon {
+    background-color: $color-cerulean-blue;
+
+    &::before {
+      background-image: url("../img/svg/checkbox-checked.svg");
+    }
+  }
+
   input:checked:disabled + .custom-toggle__icon {
     border-color: #a9afb7;
     background: #a9afb7;
   }
 
   .btn--form {
-    margin-top: 23px;
+    margin-top: 26px;
 
     width: 100%;
     justify-content: center;
@@ -195,13 +225,22 @@
     }
 
     p {
-      margin-bottom: 33px;
+      margin-bottom: 35px;
 
       line-height: 125%;
     }
 
     form {
-      gap: 17px;
+      gap: 19px;
+    }
+
+    .form__wrapper {
+      margin-top: 0;
+      gap: 10px;
+    }
+
+    .btn--form {
+      margin-top: 20px;
     }
   }
 
@@ -222,6 +261,7 @@
 
     p {
       width: 100%;
+      max-width: 100%;
       margin: 0 0 27px;
 
       font-size: 13px;
@@ -271,6 +311,14 @@
 
   @include retina {
     background-image: url("../img/feedback-form/back-desktop@2x.jpg");
+  }
+
+  @include vp-1199 {
+    background-image: url("../img/feedback-form/back-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/feedback-form/back-desktop.jpg");
+    }
   }
 
   @include vp-767 {

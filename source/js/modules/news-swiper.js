@@ -6,7 +6,6 @@ export const initNewsSwiper = function () {
     }
 
     new Swiper(".news-materials__swiper", {
-      loop: true,
 
       breakpoints: {
         320: {

@@ -28,6 +28,7 @@
 
 .hero__swiper {
   padding-top: 38px;
+  width: 100%;
 
   @include vp-1199 {
     padding-top: 35px;
@@ -127,7 +128,7 @@
 
 .hero__slide-header {
   max-width: 968px;
-  padding: 45px 40px 29px 50px;
+  padding: 46px 40px 30px 50px;
 
   background-color: $color-default-white;
   border-radius: 0 30px 30px 0;
@@ -146,10 +147,10 @@
   @include vp-1199 {
     max-width: 97%;
     margin-top: 3px;
-    padding: 34px 40px 23px;
+    padding: 34px 30px 23px 40px;
 
     h2 {
-      max-width: 97.2%;
+      max-width: 100%;
       font-size: 34px;
       line-height: 125%;
     }
@@ -179,9 +180,9 @@
   gap: 25px;
   align-items: center;
   max-width: 62.3%;
-  min-height: 105px;
-  margin-top: -7px;
-  padding: 0 50px 27px;
+  min-height: 89px;
+  margin-top: -1px;
+  padding: 0 50px 35px;
 
   background-color: $color-default-white;
   border-radius: 0 0 30px 30px;
@@ -189,7 +190,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 6px;
+    top: 0;
     right: -25px;
     width: 26px;
     height: 26px;
@@ -199,6 +200,7 @@
   @include vp-1199 {
     max-width: 87.3%;
     padding: 0 40px 32px;
+    align-items: start;
   }
 
   @include vp-767 {
@@ -223,7 +225,7 @@
   p {
     max-width: 446px;
     font-size: 15px;
-    line-height: 162.5%;
+    line-height: 140%;
     margin: 0;
   }
 
@@ -309,4 +311,5 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: 0 10%;
 }
