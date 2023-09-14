@@ -111,7 +111,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 29px;
+  gap: 27px;
   width: 604px;
   min-height: 430px;
   padding: 50px 50px 42px;
@@ -120,9 +120,9 @@
 
   @include vp-1260 {
     width: 77.46%;
-    height: 395px;
-    padding-top: 45px;
-    gap: 22px;
+    min-height: 395px;
+    padding-top: 49px;
+    gap: 26px;
   }
 
   @include vp-767 {
@@ -138,6 +138,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   @include vp-767 {
     gap: 14px;
@@ -247,6 +248,8 @@
   }
 
   @include vp-1199 {
+    gap: 20px;
+
     span {
       font-size: 18.8px;
       line-height: 120%;
@@ -254,13 +257,11 @@
 
     p {
       font-size: 15px;
-      line-height: 127%;
+      line-height: 131%;
     }
   }
 
   @include vp-767 {
-    gap: 20px;
-
     span {
       font-size: 15px;
       line-height: 120%;

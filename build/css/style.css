@@ -1520,7 +1520,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 30px;
+  gap: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1538,23 +1538,33 @@ button,
 }
 @media (max-width: 1199px) {
   .menu.menu-footer {
-    margin-left: auto;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    width: 80%;
   }
   .menu.menu-footer ul {
-    gap: 15px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    gap: 16px;
   }
   .menu.menu-footer a {
+    font-size: 15px;
     line-height: 125%;
   }
 }
 @media (max-width: 767px) {
+  .menu.menu-footer {
+    width: 100%;
+  }
   .menu.menu-footer ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-column-gap: 26px;
-       -moz-column-gap: 26px;
-            column-gap: 26px;
+    -webkit-column-gap: 25px;
+       -moz-column-gap: 25px;
+            column-gap: 25px;
     row-gap: 10px;
   }
   .menu.menu-footer a {
@@ -2742,15 +2752,15 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .hero__pagination.swiper-pagination {
-    top: 9px;
+    top: 6px;
     min-height: 28px;
-    padding: 10px 16px 12px 16px;
+    padding: 10px 16px 20px 16px;
     border-radius: 12px 12px 0 0;
   }
   .hero__pagination.swiper-pagination::after {
     width: 10px;
     height: 10px;
-    bottom: 3px;
+    bottom: 9px;
     right: -9.5px;
     background-image: url("../img/svg/angle-pagination-mobile.svg");
     background-repeat: no-repeat;
@@ -2836,12 +2846,12 @@ button.swiper-pagination-bullet {
   .hero__slide-header {
     max-width: 100%;
     margin-top: 0;
-    padding: 20px 15px 20px 13px;
+    padding: 20px 15px 15px 13px;
     border-radius: 0 16px 16px 0;
   }
   .hero__slide-header h2 {
     max-width: 100%;
-    font-size: 21px;
+    font-size: 20.8px;
     line-height: 126%;
     border-radius: 0 16px 16px 0;
   }
@@ -3630,6 +3640,12 @@ button.swiper-pagination-bullet {
 .form input:disabled:hover {
   border-color: rgba(169, 175, 183, 0.5);
 }
+.form input[type=checkbox]:hover + .custom-toggle__icon,
+.form input[type=checkbox]:focus-visible + .custom-toggle__icon,
+.form input[type=checkbox]:focus + .custom-toggle__icon {
+  outline: none;
+  border-color: #484848;
+}
 .form .btn--form {
   font-size: 13px;
   font-weight: 500;
@@ -4376,6 +4392,8 @@ button.swiper-pagination-bullet {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     gap: 12px;
+    width: 95vw;
+    overflow: auto;
   }
   .news-materials__buttons button {
     padding: 7px 12px;
@@ -4465,7 +4483,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .news-materials__swiper.swiper {
-    padding-top: 26px;
+    padding-top: 6px;
   }
   .news-materials__swiper .news-materials__swiper-pagination {
     margin-top: 22px;
@@ -5076,7 +5094,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  gap: 29px;
+  gap: 27px;
   width: 604px;
   min-height: 430px;
   padding: 50px 50px 42px;
@@ -5086,9 +5104,9 @@ button.swiper-pagination-bullet {
 @media (max-width: 1260px) {
   .reviews__swiper-slide {
     width: 77.46%;
-    height: 395px;
-    padding-top: 45px;
-    gap: 22px;
+    min-height: 395px;
+    padding-top: 49px;
+    gap: 26px;
   }
 }
 @media (max-width: 767px) {
@@ -5112,6 +5130,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .reviews__main-info {
@@ -5216,19 +5235,19 @@ button.swiper-pagination-bullet {
   line-height: 170%;
 }
 @media (max-width: 1199px) {
+  .reviews__content {
+    gap: 20px;
+  }
   .reviews__content span {
     font-size: 18.8px;
     line-height: 120%;
   }
   .reviews__content p {
     font-size: 15px;
-    line-height: 127%;
+    line-height: 131%;
   }
 }
 @media (max-width: 767px) {
-  .reviews__content {
-    gap: 20px;
-  }
   .reviews__content span {
     font-size: 15px;
     line-height: 120%;
@@ -5480,7 +5499,8 @@ button.swiper-pagination-bullet {
   border-color: #ffffff;
 }
 .feedback-form input[type=checkbox]:hover + .custom-toggle__icon,
-.feedback-form input[type=checkbox]:focus-visible + .custom-toggle__icon {
+.feedback-form input[type=checkbox]:focus-visible + .custom-toggle__icon,
+.feedback-form input[type=checkbox]:focus + .custom-toggle__icon {
   outline: none;
   border-color: #ffffff;
 }
@@ -5788,7 +5808,7 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: end;
           justify-content: end;
   gap: 20px;
-  width: 316px;
+  width: 210px;
   margin: 0 0 0 auto;
   padding: 0;
   list-style: none;
@@ -5808,6 +5828,7 @@ button.swiper-pagination-bullet {
 }
 @media (max-width: 767px) {
   .social {
+    width: 100%;
     margin-right: auto;
   }
   .social ul {
@@ -5815,6 +5836,7 @@ button.swiper-pagination-bullet {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-right: auto;
   }
 }
 

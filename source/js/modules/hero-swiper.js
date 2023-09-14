@@ -8,9 +8,9 @@ export const initHeroSwiper = function () {
       slidesPerView: 1,
       loop: true,
 
-      autoplay: {
-        delay: 3000,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      // },
 
       breakpoints: {
         1200: {

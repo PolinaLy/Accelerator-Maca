@@ -85,6 +85,8 @@
   @include vp-767 {
     flex-wrap: nowrap;
     gap: 12px;
+    width: 95vw;
+    overflow: auto;
 
     button {
       padding: 7px 12px;
@@ -180,7 +182,7 @@
 
   @include vp-767 {
     &.swiper {
-      padding-top: 26px;
+      padding-top: 6px;
     }
 
     .news-materials__swiper-pagination {

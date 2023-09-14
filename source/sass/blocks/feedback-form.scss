@@ -91,7 +91,8 @@
   }
 
   input[type="checkbox"]:hover,
-  input[type="checkbox"]:focus-visible {
+  input[type="checkbox"]:focus-visible,
+  input[type="checkbox"]:focus {
     & + .custom-toggle__icon {
       outline: none;
       border-color: $color-default-white;
