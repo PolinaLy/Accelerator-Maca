@@ -6419,7 +6419,12 @@ button.swiper-pagination-bullet {
     flex-wrap: nowrap;
     gap: 12px;
     width: 95vw;
+    padding: 0;
     overflow: auto;
+  }
+
+  .news-materials__buttons::-webkit-scrollbar {
+    width: 0;
   }
 
   .news-materials__buttons button {
@@ -6429,7 +6434,7 @@ button.swiper-pagination-bullet {
   }
 
   .news-materials__swiper.swiper {
-    padding-top: 6px;
+    padding-top: 26px;
   }
 
   .news-materials__swiper .news-materials__swiper-pagination {
